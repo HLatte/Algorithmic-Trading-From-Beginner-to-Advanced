@@ -1,10 +1,12 @@
+# Modificado por HH
+
+
 import backtrader as bt
 import yfinance as yf
 import pandas as pd
 import numpy as np
 import dateutil.relativedelta as rd
 import matplotlib.pyplot as plt
-%matplotlib inline
 import seaborn as sns
 import importlib
 
@@ -15,13 +17,15 @@ def load_strategy(class_name):
 
 ticker = "BTC-USD"
 start = "2018-01-01"
-end = "2025-01-01"
+end = "2026-01-01"
 
 start_dt = pd.to_datetime(start)
 end_dt = pd.to_datetime(end)
 
 
-strategy = load_strategy("QuantileChannelStrategy")
+#strategy = load_strategy("QuantileChannelStrategy")
+strategy = load_strategy("KeltnerBreakoutStrategy")
+
 
 data = yf.download(ticker, start=start, end=end, progress=False)
 

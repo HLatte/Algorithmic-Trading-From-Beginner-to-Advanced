@@ -15,8 +15,8 @@ class KeltnerChannel(bt.Indicator):
     """
     lines = ('mid', 'top', 'bot')
     params = (
-        ('ema_period', 30),
-        ('atr_period', 14), 
+        ('ema_period', 21*3),  # anterior 30 days
+        ('atr_period', 21),  # anterior 14 days
         ('atr_multiplier', 1.0),
     )
 
