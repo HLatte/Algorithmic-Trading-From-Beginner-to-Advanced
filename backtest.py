@@ -15,7 +15,7 @@ def load_strategy(class_name):
     strategy = getattr(module, class_name)
     return strategy
 
-ticker = "BTC-USD"
+ticker = "MSFT" #"BTC-USD"
 start = "2018-01-01"
 end = "2026-01-01"
 
